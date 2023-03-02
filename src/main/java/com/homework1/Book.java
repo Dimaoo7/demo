@@ -28,10 +28,11 @@ public class Book {
     }
 
 
-    public String toString() {
-        return "Книга " + getNameOfBook()+ author.toString1() + "\n Год издания " + getPublishYear();
+    @Override  public String toString() {
+        return "Книга " + getNameOfBook()+ author.toString() + "\n Год издания " + getPublishYear();
     }
 
+    @Override
     public int hashCode() {
         return java.util.Objects.hash(getNameOfBook());
     }

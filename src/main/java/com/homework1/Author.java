@@ -7,11 +7,25 @@ public class Author {
         return this.author;
     }
 
+
     public Author (String author){
             this.author = author;
     }
-    public String toString1() {
+
+    @Override
+    public String toString() {
         return "\n Автор " + author;
     }
 
+    @Override
+    public int hashCode() {
+        return author.hashCode();
+    }
+
+    public boolean equals(boolean eq) {
+        if (author.equals(getAuthor())) {
+            eq = true;
+        }
+        return eq;
+    }
 }
