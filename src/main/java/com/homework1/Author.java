@@ -10,5 +10,8 @@ public class Author {
     public Author (String author){
             this.author = author;
     }
+    public String toString1() {
+        return "\n Автор " + author;
+    }
 
 }

@@ -1,5 +1,7 @@
 package com.homework1;
 
+import java.util.Objects;
+
 public class Book {
     private final String nameOfBook;
     private final Author author;
@@ -24,6 +26,17 @@ public class Book {
     public void setPublishYear(int publishYear) {
         this.publishYear = publishYear;
     }
+
+
+    public String toString() {
+        return "Книга " + getNameOfBook()+ author.toString1() + "\n Год издания " + getPublishYear();
+    }
+
+    public int hashCode() {
+        return java.util.Objects.hash(getNameOfBook());
+    }
+
+
 
 }
 
