@@ -1,5 +1,7 @@
 package com.homework1;
 
+import java.util.Objects;
+
 public class Author {
     private final String author;
 
@@ -22,10 +24,11 @@ public class Author {
         return author.hashCode();
     }
 
-    public boolean equals(boolean eq) {
-        if (author.equals(getAuthor())) {
-            eq = true;
-        }
-        return eq;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Author author1 = (Author) o;
+        return Objects.equals(author, author1.author);
     }
 }
